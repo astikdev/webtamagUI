@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button, Text, XStack, YStack } from 'tamagui';
-
+import { Alert } from 'react-native';
+import * as ImagePicker from 'expo-image-picker';
 import {
   FilePlus,
   Folders,
@@ -14,6 +15,27 @@ import { useTranslation } from 'react-i18next';
 
 const App: React.FC = () => {
   const { t } = useTranslation('app');
+
+  const openPicker = async () => {
+    const permission = await ImagePicker.requestCameraPermissionsAsync();
+    if (!permission.granted) {
+      Alert.alert(t('permissionAlert'));
+      return;
+    }
+
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: 'All',
+      aspect: [4, 3],
+      quality: 0.8,
+      allowsMultipleSelection: true,
+      base64: false,
+      selectionLimit: 5,
+    });
+
+    if (!result.canceled) {
+      console.log('result.assets: ', result.assets);
+    }
+  };
 
   return (
     <MobileContainer safeArea>
@@ -61,14 +83,19 @@ const App: React.FC = () => {
           </Button>
         </XStack>
         <XStack>
-          <Button f={1} size="$8" onPress={() => {}}>
+          <Button
+            f={1}
+            size="$8"
+            onPress={() => {
+              openPicker();
+            }}>
             <XStack gap="$2" ai="center" f={1}>
               <Share2 size="$4" />
-              <Text fontSize="$8">{t('shareApp')}</Text>
+              <Text fontSize="$8">{t('mediaPickerObjectConsole')}</Text>
             </XStack>
           </Button>
         </XStack>
-      </YStack>
+      </YStack>   q
     </MobileContainer>
   );
 };

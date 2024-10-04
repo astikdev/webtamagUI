@@ -1,3 +1,4 @@
+
 const english = {
   navigation: {
     home: 'Home',
@@ -21,6 +22,8 @@ const english = {
     notification: 'Notification',
     staff: 'Staff',
     patient: 'Patient',
+    permissionAlert: 'Please allow permission to access your gallery',
+    mediaPickerObjectConsole: 'check Media Object Console'
   },
 };
 export default english;
