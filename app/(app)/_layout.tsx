@@ -43,6 +43,12 @@ const App = () => {
           title: t('home'),
         }}
       />
+      <Stack.Screen
+        name="dashboard"
+        options={{
+          headerShown: false,
+        }}
+      />
     </Stack>
   );
 };

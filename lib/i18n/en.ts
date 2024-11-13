@@ -1,4 +1,3 @@
-
 const english = {
   navigation: {
     home: 'Home',
@@ -10,6 +9,7 @@ const english = {
     login: 'Login',
     createTeam: 'Create Team',
     notification: 'Notification',
+    OTPVerify: 'OTP Verify',
   },
   app: {
     scanQr: 'Scan QR',
@@ -19,11 +19,187 @@ const english = {
     logout: 'Logout',
     login: 'Login',
     shareApp: 'Share App',
+    careScanXTitle: 'CareScanX | Scanning the Future, Caring for Precision',
+    shareContent: `With Carescanx, you can scan and submit a request for medical assistance, and you'll receive prompt service assistance for any issue you have raised.`,
+    permissionAlert: 'Please allow permission to access your gallery',
+    mediaPickerObjectConsole: 'check Media Object Console',
     notification: 'Notification',
     staff: 'Staff',
     patient: 'Patient',
+    welcome_message: 'Welcome to CareScanX, {{name}} ({{role}})!',
+    shareError: 'Error sharing. Please try again.',
+  },
+  scanner: {
+    fetchingLocation: 'Fetching location...',
+    validatingCode: 'Validating the code...',
+    permissionDenied:
+      'For security reasons you can not raise issue without location permission. Please allow from settings.',
+    galleryPermission: 'Please allow permission to access your gallery',
+    qrCodeReadError: 'Could not read the QR Code from given image',
+    selectFromGallery: 'Select From Gallery',
+  },
+  notFoundScreen: {
+    title: 'Oops!',
+    message: "This screen doesn't exist.",
+    goToHomeScreen: 'Go to home screen!',
+  },
+  otpVerify: {
+    enterOTP: 'Enter OTP',
+    verify: 'Verify',
+    errorOTP: 'Please enter a valid 6-digit OTP',
+    resendOtp: 'Resend OTP',
+    resendOtpWithTimer: 'Resend OTP in {{count}} second',
+    successMessage: 'OTP Sent Successfully',
+  },
+  signIn: {
+    sendOtp: 'Send OTP',
+    enterWhatsappNumber: 'Enter WhatsApp Number',
+  },
+  teamCreate: {
+    testing: 'Testing',
+  },
+  teams: {
+    addNewMember: 'Add New Member',
+    deleteAlert: {
+      title: 'Are you sure?',
+      description:
+        'This record will be permanently deleted. Are you sure you want to delete this record?',
+      okText: 'Delete',
+    },
+    userName: 'User Name',
+    mobileNumber: 'Mobile Number',
+    deletedToast: 'Deleted',
+    noIssuesFound: 'No issues found.',
+    department: 'Department',
+  },
+  dashboard: {
+    newIssues: 'New Issues',
+    issues: {
+      issuesResolved: 'Issues Resolved',
+      highPriorityIssues: 'High Priority Issues',
+      today: 'Today: {{count}}',
+      thisMonth: 'This Month: {{count}}',
+    },
+    bestPerformer: {
+      title: 'Best Performer',
+      subtitle: 'Most active Member',
+      name: 'Rohit Sharma',
+    },
+    noIssuesFound: 'No issues found.',
+  },
+  issueDetails: {
+    notFound: 'The issue your are looking for, Not found.',
+    title: 'Title',
+    issueId: 'Issue ID',
+    bed: 'Bed',
+    department: 'Department',
+    createdAt: 'Created At',
+    updatedAt: 'Updated At',
+    priority: 'Priority',
+    status: 'Status',
+    description: 'Description',
+    attachments: 'Attachments',
+    teamResponse: 'Team Response',
+    imagesByTeam: 'Images by team',
+    back: 'Back',
+    assignIssue: 'Assign Issue',
+    markAsResolved: 'Mark as Resolved',
+  },
+  viewIssue: {
+    notFound: 'The issue your are looking for, Not found.',
+    replyByTeam: 'Reply by team',
+    chooseStatus: 'Choose a status',
+    submit: 'Submit',
+    issueTitle: 'Toilet is not cleaned',
+    issueDescription:
+      'Its been 2 days since the washroom is cleaned and it is also smelling bad. Guests are also complaining. Please do something as soon as possible to handle such situation.',
+    hospitalName: 'Akshar Hospital',
+    department: 'House Keeping Department',
+    statusInProgress: 'In progress',
+    issueDate: '12th July 2024, 05:30 PM',
+    priorityHigh: 'High',
+    issueStatus: {
+      PENDING: 'Pending',
+      IN_PROGRESS: 'In Progress',
+      COMPLETED: 'Completed',
+    },
+    issueResponseAttachment: 'Issue Response Attachment',
+    issueResponse: 'Issue Response',
+    attachments: 'Attachments',
+    status: 'Status',
+    descriptionError: 'Description is required',
+  },
+  createIssue: {
+    enterSubject: 'Enter issue subject',
+    enterDescription: 'Enter your issue...',
+    assignTo: 'Assign to',
+    yourName: 'Your name',
+    whatsappNumber: 'Your WhatsApp number',
+    termsAgreement: 'I agree to the terms',
+    submitIssue: 'Submit Issue',
+    bedInfo: 'Bed: {{bedName}}',
+    low: 'Low',
+    medium: 'Medium',
+    high: 'High',
     permissionAlert: 'Please allow permission to access your gallery',
-    mediaPickerObjectConsole: 'check Media Object Console'
+    securityError:
+      'For security reasons you can not raise issue without location permission. Please allow from settings.',
+    noBedFoundError: 'No bed found',
+    selectedMediaError: 'Select Maximum 5 Media Files',
+    selectedMediaMimeTypeNotMatchError:
+      'Please select media files in a supported format.',
+    fileSizeExceeded: 'File size limit exceeded',
+  },
+  thankyou: {
+    concernRaised: 'Your concern has been raised successfully.',
+    reviewMessage:
+      'Our team will review it and resolve it as soon as possible. Please wait while we are working on it.',
+    loginPrompt:
+      'Please login with your number in order to checkout the issues your raised and get its updates.',
+    notificationMessage:
+      'You will get notified when your issue is resolved if you have turned on the notifications. You can also check the issue status anytime from the application.',
+    noBedFound: 'No bed found. Please scan QR code to raise an issue',
+    login: 'Login',
+    viewIssue: 'View Issue',
+    home: 'Home',
+  },
+  issuesTable: {
+    columns: {
+      subject: 'Subject',
+      bed: 'Bed',
+      assignedTo: 'Assigned To',
+      createdAt: 'Created At',
+      updatedAt: 'Updated At',
+      priority: 'Priority',
+      status: 'Status',
+    },
+  },
+  hodLayout: {
+    tabs: {
+      dashboard: 'Dashboard',
+      teams: 'Teams',
+      issues: 'Issues',
+      notification: 'Notification',
+      viewIssue: 'View Issue',
+    },
+  },
+  issues: {
+    noIssuesFound: 'No issues found.',
+  },
+  notFound: {
+    notFound: 'No data found.',
+  },
+  notification: {
+    noNotificationFound: 'No Notification FOund',
+  },
+  errors: {
+    generic: 'Oops, something went wrong. Try again later.',
+    form: {
+      required: 'This field is required.',
+      minLengthError: 'Minimum character limit not met.',
+      maxLengthError: 'Exceeded maximum character limit.',
+      numberError: 'Field must include a number.',
+    },
   },
 };
 export default english;

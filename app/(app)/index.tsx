@@ -12,6 +12,8 @@ import {
 import { MobileContainer } from 'components/shared/MobileContainer';
 
 import { useTranslation } from 'react-i18next';
+import { router } from 'expo-router';
+import { Routes } from 'constants/Routes';
 
 const App: React.FC = () => {
   const { t } = useTranslation('app');
@@ -75,7 +77,12 @@ const App: React.FC = () => {
 
       <YStack gap="$4" f={1} justifyContent="flex-end">
         <XStack>
-          <Button onPress={() => {}} f={1} size="$8">
+          <Button
+            onPress={() => {
+              router.navigate(Routes.APP_DASHBOARD);
+            }}
+            f={1}
+            size="$8">
             <XStack gap="$2" ai="center" f={1}>
               <LogIn size="$4" />
               <Text fontSize="$8">{t('login')}</Text>
@@ -95,7 +102,7 @@ const App: React.FC = () => {
             </XStack>
           </Button>
         </XStack>
-      </YStack>   q
+      </YStack>
     </MobileContainer>
   );
 };
